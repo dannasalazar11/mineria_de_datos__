@@ -38,7 +38,7 @@ def main():
     if uploaded_file is not None:
         image = Image.open(uploaded_file)
         st.markdown("### Imagen original:")
-        st.image(image, caption="Imagen subida", use_column_width=True)
+        st.image(image, caption="Imagen subida", use_container_width=True)
 
         # Preprocesar imagen
         preprocessed_image = preprocess_image(image)
@@ -46,12 +46,12 @@ def main():
         # Mostrar las imágenes lado a lado
         col1, col2 = st.columns(2)
         with col1:
-            st.image(image, caption="Imagen Original", use_column_width=True)
+            st.image(image, caption="Imagen Original", use_container_width=True)
         with col2:
             st.image(
                 preprocessed_image[0].reshape(28, 28), 
                 caption="Imagen Preprocesada", 
-                use_column_width=True
+                use_container_width=True
             )
 
         if st.button("Clasificar imagen"):
