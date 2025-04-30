@@ -31,7 +31,7 @@ def main():
         '<h1 style="color: #4CAF50; text-align: center;">Clasificación de la base de datos Fashion MNIST</h1>',
         unsafe_allow_html=True
     )
-    st.markdown("Sube una imagen para clasificar")
+    st.markdown("Sube una imagen para clasificar què tipo de prenda es")
 
     uploaded_file = st.file_uploader("Selecciona una imagen (PNG, JPG, JPEG):", type=["jpg", "png", "jpeg"])
 
